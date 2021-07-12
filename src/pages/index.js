@@ -7,7 +7,7 @@ import PhoneInput from "react-phone-number-input"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Button from "../components/button"
-import { Device } from "./Device"
+import Device from "./Device"
 
 const IndexPage = () => {
   const [textLinkValue, setTextLinkValue] = useState()

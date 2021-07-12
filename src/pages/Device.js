@@ -1,7 +1,7 @@
 import * as React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 
-export function Device(props) {
+export default function Device(props) {
   const { class_name, launch } = props
   return (
 
