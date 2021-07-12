@@ -45,7 +45,7 @@ p {
   height: 55vh;
 }
 
-.main-title{
+.main-title {
   font-family: "Oswald";
   font-weight: bold;
   font-size: 40px;
@@ -57,7 +57,7 @@ p {
   width: 387px;
 }
 
-.coming-soon{
+.coming-soon {
   font-style: normal;
   font-weight: 800;
   font-size: 19px;
@@ -75,7 +75,8 @@ p {
 .sub-content-left {
   width: 387px;
 }
-.app-store-button{
+
+.app-store-button {
   display: none;
 }
 
@@ -85,6 +86,10 @@ button,
   font-weight: bold;
   font-size: 18px;
   color: white;
+}
+
+.btn {
+  cursor: pointer;
 }
 
 input:focus {
@@ -175,6 +180,7 @@ button.secondary {
   transform: rotate(10deg);
 
 }
+
 .device-frame {
   position: absolute;
   z-index: 1;
@@ -197,7 +203,6 @@ footer {
   height: 120px;
   background-color: #16191c;
   width: 100%;
-  /* margin-top: 120px; */
 }
 
 footer .footer-inner {
@@ -262,11 +267,12 @@ footer a:visited {
     border-radius: 0;
     margin: 0;
   }
-  .main-title{
+
+  .main-title {
     font-size: 36px;
     line-height: 36px;
   }
-  
+
   .sub-content {
     width: auto;
     margin: 0;
@@ -274,7 +280,7 @@ footer a:visited {
     margin-bottom: 60px;
   }
 
-  .sub-content-left{
+  .sub-content-left {
     width: auto;
     padding: auto;
   }
@@ -282,6 +288,7 @@ footer a:visited {
   .device {
     display: none;
   }
+
   .device2 {
     display: flex;
   }
@@ -290,20 +297,22 @@ footer a:visited {
     width: 100%;
   }
 
-  .get-app-download-link{
+  .get-app-download-link {
     display: none;
   }
-  .app-store-button
-  {
+
+  .app-store-button {
     display: inline-block;
   }
-  .android-input-notify{
+
+  .android-input-notify {
     display: inline-block;
   }
-  
+
   footer {
     height: 160px;
   }
+
   footer .footer-inner {
     flex-direction: column;
     justify-content: space-around;
@@ -324,25 +333,28 @@ footer a:visited {
 }
 
 @media only screen and (max-width: 480px) {
-  .main-title{
+  .main-title {
     font-size: 24px;
   }
-  .main-content{
+
+  .main-content {
     padding: 60px 16px
   }
-  .sub-content-title{
+
+  .sub-content-title {
     font-size: 24px;
     line-height: 36px;
   }
-  .app-store-button
-  {
-    display: contents;
-  }
-  .android-input-notify{
-    display: contents;
-  }
-  .sub-content{
-    padding: 60px 16px;
 
+  .app-store-button {
+    display: contents;
+  }
+
+  .android-input-notify {
+    display: contents;
+  }
+
+  .sub-content {
+    padding: 60px 16px;
   }
 }

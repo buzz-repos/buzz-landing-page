@@ -12,8 +12,19 @@ import { Device } from "./Device"
 const IndexPage = () => {
   const [textLinkValue, setTextLinkValue] = useState()
   const [androidPhoneValue, setAndroidPhoneValue] = useState()
-  var LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false;
-  // var LAUNCH = 'false';
+  const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false;  
+  
+  const handleAppStoreButton = (evt) => {
+    console.log('Open URL App Store')
+  }
+
+  const handleNotifyButton = (evt) => {
+    console.log('handleNotifyButton')
+  }
+
+  const handleGetAppDownloadButton = (evt) => {
+    console.log('handleGetAppDownloadButton')
+  }
 
   return (
     <Layout>
@@ -47,10 +58,10 @@ const IndexPage = () => {
                   defaultCountry="US"
                   style={{ marginBottom: 21 }}
                 />
-                <Button text="get app download link" apple></Button>
+                <Button onClick={handleGetAppDownloadButton} text="get app download link" apple></Button>
               </span>
               <span className="app-store-button" >
-                <Button text="App Store" apple></Button>
+                <Button onClick={handleAppStoreButton} text="App Store" apple></Button>
               </span>
             </span> : 
             <div className="coming-soon">
@@ -83,7 +94,7 @@ const IndexPage = () => {
               defaultCountry="US"
               style={{ marginBottom: 21 }}
             />
-            <Button text="notify me" secondary></Button>
+            <Button onClick={handleNotifyButton} text="notify me" secondary></Button>
           </div>
         </div> : null
       }

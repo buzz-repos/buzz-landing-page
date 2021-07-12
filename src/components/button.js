@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-const Button = ({ text, apple, secondary }) => (
-  <button className={secondary ? "secondary" : "primary"}>
+const Button = ({ text, apple, secondary, onClick }) => (
+  <button onClick={onClick} className={secondary ? "btn secondary" : "btn primary"}>
     {apple && (
       <StaticImage
         src="../images/apple.png"
