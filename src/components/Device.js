@@ -5,7 +5,7 @@ export default function Device(props) {
   const { class_name, launch } = props
   return (
 
-    <span className={class_name}>
+    <div className={class_name}>
       <StaticImage
         src="../images/device.png"
         width={360}
@@ -33,6 +33,6 @@ export default function Device(props) {
           className="device-screenshot"
         />
       }
-    </span>
+    </div>
   )
 }

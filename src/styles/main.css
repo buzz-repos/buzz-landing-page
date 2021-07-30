@@ -40,28 +40,17 @@ p {
   max-width: 1162px;
   position: relative;
   background: white;
-  max-height: 518px;
+  display: flex;
+  height: 518px;
   box-sizing: border-box;
-  height: 55vh;
-}
-
-.main-title {
-  font-family: "Oswald";
-  font-weight: bold;
-  font-size: 40px;
-  line-height: 48px;
-  margin-bottom: 16px;
 }
 
 .main-content-left {
   width: 387px;
 }
 
-.coming-soon {
-  font-style: normal;
-  font-weight: 800;
-  font-size: 19px;
-  line-height: 24px;
+.center {
+  align-items: center;
 }
 
 .sub-content {
@@ -69,7 +58,6 @@ p {
   height: 20vh;
   margin: 0 auto 0;
   max-width: 1024px;
-  margin-bottom: 120px;
 }
 
 .sub-content-left {
@@ -86,10 +74,6 @@ button,
   font-weight: bold;
   font-size: 18px;
   color: white;
-}
-
-.btn {
-  cursor: pointer;
 }
 
 input:focus {
@@ -111,6 +95,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 button.secondary {
@@ -162,7 +147,7 @@ button.secondary {
   justify-content: center;
 }
 
-.device2 {
+.bottom-device {
   position: relative;
   right: -100px;
   width: 360px;
@@ -175,10 +160,9 @@ button.secondary {
   transform: rotate(10deg);
 }
 
-.device2 .rotate-device {
+.bottom-device .rotate-device {
   margin-right: -50px;
   transform: rotate(10deg);
-
 }
 
 .device-frame {
@@ -222,6 +206,10 @@ footer a,
 footer a:visited {
   color: white;
   text-decoration: none;
+}
+
+.footer-space {
+  height: 264px;
 }
 
 .logo-white {
@@ -268,16 +256,10 @@ footer a:visited {
     margin: 0;
   }
 
-  .main-title {
-    font-size: 36px;
-    line-height: 36px;
-  }
-
   .sub-content {
     width: auto;
     margin: 0;
     height: auto;
-    margin-bottom: 60px;
   }
 
   .sub-content-left {
@@ -289,7 +271,7 @@ footer a:visited {
     display: none;
   }
 
-  .device2 {
+  .bottom-device {
     display: flex;
   }
 
@@ -318,6 +300,9 @@ footer a:visited {
     justify-content: space-around;
     align-items: flex-start;
   }
+  .footer-space {
+    height: 0;
+  }
 }
 
 @media only screen and (min-width: 1100px) and (max-width: 1300px) {
@@ -333,12 +318,9 @@ footer a:visited {
 }
 
 @media only screen and (max-width: 480px) {
-  .main-title {
-    font-size: 24px;
-  }
 
   .main-content {
-    padding: 60px 16px
+    padding: 60px 16px;
   }
 
   .sub-content-title {

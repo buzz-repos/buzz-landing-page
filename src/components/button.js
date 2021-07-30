@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 const Button = ({ text, apple, secondary, onClick }) => (
-  <button onClick={onClick} className={secondary ? "btn secondary" : "btn primary"}>
+  <button onClick={onClick} className={secondary ? "secondary" : "primary"}>
     {apple && (
       <StaticImage
         src="../images/apple.png"

@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
         </style>
       </Helmet>
       <div className="content-wrapper">{children}</div>
-      {/* <div style={{ height: "264px" }}></div> */}
+      <div className="footer-space" ></div>
       <Footer></Footer>
     </>
   )
