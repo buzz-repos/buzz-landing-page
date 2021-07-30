@@ -30,6 +30,7 @@ p {
   min-height: calc(100vh - (60px + 120px + 120px));
   padding-left: 60px;
   padding-right: 60px;
+  overflow: hidden;
 }
 
 .main-content {
@@ -39,7 +40,8 @@ p {
   max-width: 1162px;
   position: relative;
   background: white;
-  max-height: 518px;
+  display: flex;
+  height: 518px;
   box-sizing: border-box;
 }
 
@@ -47,9 +49,23 @@ p {
   width: 387px;
 }
 
+.center {
+  align-items: center;
+}
+
 .sub-content {
+  padding: 60px;
+  height: 20vh;
+  margin: 0 auto 0;
+  max-width: 1024px;
+}
+
+.sub-content-left {
   width: 387px;
-  margin-top: 120px;
+}
+
+.app-store-button {
+  display: none;
 }
 
 input,
@@ -79,6 +95,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 
 button.secondary {
@@ -130,6 +147,24 @@ button.secondary {
   justify-content: center;
 }
 
+.bottom-device {
+  position: relative;
+  right: -100px;
+  width: 360px;
+  height: 723px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -160px;
+  z-index: -1;
+  transform: rotate(10deg);
+}
+
+.bottom-device .rotate-device {
+  margin-right: -50px;
+  transform: rotate(10deg);
+}
+
 .device-frame {
   position: absolute;
   z-index: 1;
@@ -152,7 +187,6 @@ footer {
   height: 120px;
   background-color: #16191c;
   width: 100%;
-  margin-top: 120px;
 }
 
 footer .footer-inner {
@@ -172,6 +206,10 @@ footer a,
 footer a:visited {
   color: white;
   text-decoration: none;
+}
+
+.footer-space {
+  height: 264px;
 }
 
 .logo-white {
@@ -218,11 +256,52 @@ footer a:visited {
     margin: 0;
   }
 
+  .sub-content {
+    width: auto;
+    margin: 0;
+    height: auto;
+  }
+
+  .sub-content-left {
+    width: auto;
+    padding: auto;
+  }
+
   .device {
     display: none;
   }
+
+  .bottom-device {
+    display: flex;
+  }
+
   .main-content-left {
     width: 100%;
+  }
+
+  .get-app-download-link {
+    display: none;
+  }
+
+  .app-store-button {
+    display: inline-block;
+  }
+
+  .android-input-notify {
+    display: inline-block;
+  }
+
+  footer {
+    height: 160px;
+  }
+
+  footer .footer-inner {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  .footer-space {
+    height: 0;
   }
 }
 
@@ -235,5 +314,29 @@ footer a:visited {
 @media only screen and (min-width: 1024px) and (max-width: 1099px) {
   .device {
     right: 50px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+
+  .main-content {
+    padding: 60px 16px;
+  }
+
+  .sub-content-title {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .app-store-button {
+    display: contents;
+  }
+
+  .android-input-notify {
+    display: contents;
+  }
+
+  .sub-content {
+    padding: 60px 16px;
   }
 }

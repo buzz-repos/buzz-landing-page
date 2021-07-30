@@ -6,6 +6,7 @@ import { StaticImage } from "gatsby-plugin-image"
 const Footer = () => (
   <footer>
     <div className="footer-inner">
+      <div>
       <Link to="/">
         <StaticImage
           className="logo-white"
@@ -16,6 +17,7 @@ const Footer = () => (
           loading="eager"
         />
       </Link>
+      </div>
       <div className="legal-links">
         <Link to="/terms">Terms and Conditions</Link>
         <Link to="/privacy">Privacy</Link>
