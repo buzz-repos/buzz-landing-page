@@ -166,7 +166,7 @@ button.secondary {
 }
 
 .device-frame {
-  position: absolute;
+  position: absolute !important;
   z-index: 1;
 }
 
