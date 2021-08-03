@@ -47,6 +47,7 @@ p {
 
 .main-content-left {
   width: 387px;
+  background: red;
 }
 
 .center {
@@ -318,7 +319,6 @@ footer a:visited {
 }
 
 @media only screen and (max-width: 480px) {
-
   .main-content {
     padding: 60px 16px;
   }
