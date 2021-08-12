@@ -11,9 +11,9 @@ import Device from "../components/Device"
 const IndexPage = () => {
   const [textLinkValue, setTextLinkValue] = useState()
   const [androidPhoneValue, setAndroidPhoneValue] = useState()
-  const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false
-  console.log(process.env)
-  console.log(process.env.LAUNCH)
+  // Commenting this because variable is not detected on Gatsby cloud, unsure why not
+  // const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false
+  const LAUNCH = "true"
 
   const handleAppStoreButton = evt => {
     console.log("Open URL App Store")
