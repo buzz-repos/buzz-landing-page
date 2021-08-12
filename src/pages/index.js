@@ -12,6 +12,8 @@ const IndexPage = () => {
   const [textLinkValue, setTextLinkValue] = useState()
   const [androidPhoneValue, setAndroidPhoneValue] = useState()
   const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false
+  console.log(process.env)
+  console.log(process.env.LAUNCH)
 
   const handleAppStoreButton = evt => {
     console.log("Open URL App Store")
