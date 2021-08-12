@@ -4,7 +4,6 @@ import { StaticImage } from "gatsby-plugin-image"
 export default function Device(props) {
   const { class_name, launch } = props
   return (
-
     <div className={class_name}>
       <StaticImage
         src="../images/device.png"
@@ -13,8 +12,10 @@ export default function Device(props) {
         alt="device"
         loading="eager"
         className="device-frame"
+        layout="fixed"
+        placeholder="none"
       />
-      {launch == 'true' ?
+      {launch == "true" ? (
         <StaticImage
           src="../images/app-screen.png"
           width={319}
@@ -22,7 +23,10 @@ export default function Device(props) {
           alt="buzz screen shot"
           loading="eager"
           className="device-screenshot"
-        /> :
+          layout="fixed"
+          placeholder="none"
+        />
+      ) : (
         <StaticImage
           src="../images/coming-soon.png"
           imgStyle={{ backgroundColor: "red" }}
@@ -31,8 +35,10 @@ export default function Device(props) {
           alt="buzz screen shot"
           loading="eager"
           className="device-screenshot"
+          layout="fixed"
+          placeholder="none"
         />
-      }
+      )}
     </div>
   )
 }

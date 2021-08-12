@@ -13,6 +13,8 @@ const Button = ({ text, apple, secondary, onClick }) => (
         alt="apple"
         loading="eager"
         style={{ marginRight: 4 }}
+        layout="fixed"
+        placeholder="none"
       />
     )}
     {text}

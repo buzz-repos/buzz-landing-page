@@ -7,16 +7,18 @@ const Footer = () => (
   <footer>
     <div className="footer-inner">
       <div>
-      <Link to="/">
-        <StaticImage
-          className="logo-white"
-          src="../images/logo-white.png"
-          width={215}
-          quality={100}
-          alt="buzz"
-          loading="eager"
-        />
-      </Link>
+        <Link to="/">
+          <StaticImage
+            className="logo-white"
+            src="../images/logo-white.png"
+            width={108}
+            quality={100}
+            alt="buzz"
+            loading="eager"
+            layout="fixed"
+            placeholder="none"
+          />
+        </Link>
       </div>
       <div className="legal-links">
         <Link to="/terms">Terms and Conditions</Link>

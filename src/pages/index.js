@@ -11,24 +11,26 @@ import Device from "../components/Device"
 const IndexPage = () => {
   const [textLinkValue, setTextLinkValue] = useState()
   const [androidPhoneValue, setAndroidPhoneValue] = useState()
-  const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false;  
-  
-  const handleAppStoreButton = (evt) => {
-    console.log('Open URL App Store')
+  const LAUNCH = process.env.LAUNCH ? process.env.LAUNCH : false
+
+  const handleAppStoreButton = evt => {
+    console.log("Open URL App Store")
   }
 
-  const handleNotifyButton = (evt) => {
-    console.log('handleNotifyButton')
+  const handleNotifyButton = evt => {
+    console.log("handleNotifyButton")
   }
 
-  const handleGetAppDownloadButton = (evt) => {
-    console.log('handleGetAppDownloadButton')
+  const handleGetAppDownloadButton = evt => {
+    console.log("handleGetAppDownloadButton")
   }
 
   return (
     <Layout>
       <Seo title="buzz - digital content kingdom" />
-      <div className={LAUNCH == 'true' ? "main-content": "main-content center"}>
+      <div
+        className={LAUNCH == "true" ? "main-content" : "main-content center"}
+      >
         <div className="main-content-left">
           <div>
             <StaticImage
@@ -38,17 +40,19 @@ const IndexPage = () => {
               alt="buzz"
               loading="eager"
               style={{ marginBottom: "35px" }}
+              layout="fixed"
+              placeholder="none"
             />
           </div>
-          { LAUNCH == 'true' ? 
+          {LAUNCH == "true" ? (
             <div>
               <div className="h1">welcome to your digital content kingdom</div>
               <div style={{ marginBottom: 46 }}>
-                buzz is a social sharing app for digital content, enabling users to
-                curate personal content queues based on what really matters: who’s
-                recommending it.
+                buzz is a social sharing app for digital content, enabling users
+                to curate personal content queues based on what really matters:
+                who’s recommending it.
               </div>
-              <div className="get-app-download-link" >
+              <div className="get-app-download-link">
                 <PhoneInput
                   placeholder="phone number"
                   value={textLinkValue}
@@ -56,44 +60,61 @@ const IndexPage = () => {
                   defaultCountry="US"
                   style={{ marginBottom: 21 }}
                 />
-                <Button onClick={handleGetAppDownloadButton} text="get app download link" apple></Button>
+                <Button
+                  onClick={handleGetAppDownloadButton}
+                  text="get app download link"
+                  apple
+                ></Button>
               </div>
-              <div className="app-store-button" >
-                <Button onClick={handleAppStoreButton} text="App Store" apple></Button>
+              <div className="app-store-button">
+                <Button
+                  onClick={handleAppStoreButton}
+                  text="App Store"
+                  apple
+                ></Button>
               </div>
-            </div> : 
+            </div>
+          ) : (
             <div className="h1">coming soon...</div>
-          }
+          )}
         </div>
-        
+
         <Device class_name="device" launch={LAUNCH} />
       </div>
       <div className="sub-content">
-      { LAUNCH == 'true' ? 
-        <div className="sub-content-left">
-          <div className="android-tagline">
-            <StaticImage
-              src="../images/android.png"
-              width={32}
-              quality={100}
-              alt="android"
-              loading="eager"
-              style={{ marginRight: 16 }}
-            />
-            <span className="sub-content-title">join the Android waitlist</span>
+        {LAUNCH == "true" ? (
+          <div className="sub-content-left">
+            <div className="android-tagline">
+              <StaticImage
+                src="../images/android.png"
+                width={32}
+                quality={100}
+                alt="android"
+                loading="eager"
+                style={{ marginRight: 16 }}
+                layout="fixed"
+                placeholder="none"
+              />
+              <span className="sub-content-title">
+                join the Android waitlist
+              </span>
+            </div>
+            <div className="android-input-notify">
+              <PhoneInput
+                placeholder="phone number"
+                value={androidPhoneValue}
+                onChange={setAndroidPhoneValue}
+                defaultCountry="US"
+                style={{ marginBottom: 21 }}
+              />
+              <Button
+                onClick={handleNotifyButton}
+                text="notify me"
+                secondary
+              ></Button>
+            </div>
           </div>
-          <div className="android-input-notify" >
-            <PhoneInput
-              placeholder="phone number"
-              value={androidPhoneValue}
-              onChange={setAndroidPhoneValue}
-              defaultCountry="US"
-              style={{ marginBottom: 21 }}
-            />
-            <Button onClick={handleNotifyButton} text="notify me" secondary></Button>
-          </div>
-        </div> : null
-      }
+        ) : null}
       </div>
       <div style={{ display: "flex", justifyContent: "flex-end" }}>
         <Device class_name="bottom-device" launch={LAUNCH} />

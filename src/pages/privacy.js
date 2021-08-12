@@ -18,6 +18,8 @@ const Privacy = () => (
           quality={100}
           alt="buzz"
           loading="eager"
+          layout="fixed"
+          placeholder="none"
         />
       </Link>
       <div className="title-small">Legal</div>
